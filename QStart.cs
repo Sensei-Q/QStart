@@ -1,4 +1,4 @@
-// QStart v1.0 (c) 2021-2022 Sensei (aka 'Q')
+// QStart v1.0.1 (c) 2021-2022 Sensei (aka 'Q')
 // Quietly start a specific executable or script without opening the console.
 //
 // Usage:
@@ -20,7 +20,6 @@ public class QStart {
             process.StartInfo.FileName = args[0];
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-            process.StartInfo.Arguments = Environment.CommandLine;
             process.Start();
             process.WaitForExit();
          } catch( Exception e ) {
@@ -28,7 +27,7 @@ public class QStart {
          }
       } else {
            // It won't be called if compiling with /target:winexe
-           Console.WriteLine( "QStart v1.0 (c) 2021 Sensei" );
+           Console.WriteLine( "QStart v1.0.1 (c) 2021-2022 Sensei (aka 'Q')" );
            Console.WriteLine( "Usage:" );
            Console.WriteLine( "QStart filename" );
       }
